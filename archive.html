@@ -4,14 +4,15 @@ title: Archivo
 ---
 
 <section>
-    <table>
-        {% for post in site.posts %}
-        <tr>
-            <td><i class="icon-clock"></i>
-                <time datetime="{{post.date|date:" %F"}}">{{post.date|date:"%b %d, %Y"}}</time></td>
-            <td><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></td>
-            <td><span class="category"><i class="icon-tag"></i> {{post.categories | category_links}}</span></td>
-        </tr>
-        {% endfor %}
-    </table>
+    {% for post in site.posts %}
+    <article>
+        <header>
+            <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+            <span><time datetime="{{post.date|date:" %F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
+            <span> {{ post.categories | category_links }}</span><br/>
+            <span>{% if post.author %}{{post.author}}{% else %}{{site.author}}{% endif%}</span>
+        </header>
+        <div class="entry">{{ post.excerpt }}</div>
+    </article>
+    {% endfor %}
 </section>

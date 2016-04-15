@@ -9,24 +9,39 @@
     <link rel="author" href="humans.txt"/>
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    </style>
 </head>
-<body class="container">
+<body>
 <header>
-    <h1><a href="{{site.baseurl}}/">{{ site.name }}</a></h1>
-    <h4>{{ site.description }}</h4>
-    <hr/>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{{site.baseurl}}/" class="navbar-brand">{{ site.name }}</a></h1>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{site.baseurl}}/">Inicio</a></li>
+                    <li><a href="{{site.baseurl}}/events">Eventos</a></li>
+                    <li><a href="{{site.baseurl}}/contact">Contacto</a></li>
+                    <li><a href="{{site.baseurl}}/archive">Archivo</a></li>
+                    <li><a href="{{site.baseurl}}/feed.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
-<nav>
-    <h3>Navegación</h3>
-    <ul>
-        <li><i class="icon-home"></i> <a href="{{site.baseurl}}/">Inicio</a></li>
-        <li><i class="icon-star"></i> <a href="{{site.baseurl}}/events">Eventos</a></li>
-        <li><i class="icon-mail"></i> <a href="{{site.baseurl}}/contact">Contacto</a></li>
-        <li><i class="icon-th"></i> <a href="{{site.baseurl}}/archive">Archivo</a></li>
-        <li><i class="icon-rss"></i> <a href="{{site.baseurl}}/feed.xml">RSS</a></li>
-    </ul>
-</nav>
-<main>
+<main class="container">
     {{ content }}
 </main>
 <footer>
