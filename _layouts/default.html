@@ -3,17 +3,14 @@
 <head>
     <meta charset="utf-8"/>
     <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <meta name="description" content="{{site.description}}"/>
     <meta name="author" content="{{site.author}}"/>
     <link rel="author" href="humans.txt"/>
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml"/>
-    <link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/fontello.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/animation.css">
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/fontello-ie7.css"><![endif]-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="container">
 <header>
     <h1><a href="{{site.baseurl}}/">{{ site.name }}</a></h1>
     <h4>{{ site.description }}</h4>
