@@ -2,6 +2,7 @@
 layout: post
 title: GDG Kids Mallorca - 23/04/2016
 category: Eventos
+future: true
 
 ---
 
